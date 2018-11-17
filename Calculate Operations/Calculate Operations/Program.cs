@@ -13,6 +13,11 @@ namespace Calculate_Operations
             int result = CalculateOperations(5, 16);
         }
 
+        // Calculate how many operations are need from startNumber to become endNumber using only:
+        // 1: n = n + 1
+        // 2: n = n + 2
+        // 3: n = n * 2
+
         private static int CalculateOperations(int startNumber, int endNumber)
         {
             int target = endNumber / 2;
