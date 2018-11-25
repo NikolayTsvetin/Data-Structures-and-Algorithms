@@ -23,7 +23,7 @@ namespace Insertion_Sort
                 int currentElement = nums[i];
                 int j = i - 1;
 
-                while (j >= 0 && nums[j] > currentElement)
+                while (j >= 0 && nums[j] < currentElement)
                 {
                     nums[j + 1] = nums[j];
                     j -= 1;
