@@ -54,21 +54,22 @@ namespace Doubly_Linked_List
         public void Print()
         {
             StringBuilder result = new StringBuilder();
+            Node<T> tempEl = head;
 
-            if (head == null)
+            if (tempEl == null)
             {
                 result.Append("The linked list is empty.");
             }
             else
             {
-                while (head.Next != null)
+                while (tempEl.Next != null)
                 {
-                    result.Append($" {head.Value}");
-                    head = head.Next;
+                    result.Append($" {tempEl.Value}");
+                    tempEl = tempEl.Next;
 
-                    if (head.Next == null)
+                    if (tempEl.Next == null)
                     {
-                        result.Append($" {head.Value}");
+                        result.Append($" {tempEl.Value}");
                     }
                 }
             }

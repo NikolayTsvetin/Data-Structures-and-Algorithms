@@ -20,6 +20,8 @@ namespace Doubly_Linked_List
             myLinkedList.RemoveFirst();
             myLinkedList.RemoveLast();
             myLinkedList.Print();
+            myLinkedList.RemoveFirst();
+            myLinkedList.Print();
             
         }
     }
