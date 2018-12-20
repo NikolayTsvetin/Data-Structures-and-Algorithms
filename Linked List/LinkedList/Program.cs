@@ -26,6 +26,10 @@ namespace LinkedList
             myLinkedList.RemoveLast();
 
             myLinkedList.PrintAllNodes();
+
+            myLinkedList.RemoveFirst();
+            myLinkedList.RemoveLast();
+            myLinkedList.PrintAllNodes();
         }
     }
 }
