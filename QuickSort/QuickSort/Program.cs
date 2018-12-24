@@ -12,34 +12,46 @@ namespace QuickSort
         {
             List<int> unsortedNumbers = new List<int>() { 14, 13, 56, 123, 52, 6, 12, 0 };
 
-            List<int> sortedNumbers = Quicksort(unsortedNumbers, 0, unsortedNumbers.Count - 1);
+            Console.WriteLine(string.Join(", ", unsortedNumbers));
 
-            Console.WriteLine(string.Join(", ", sortedNumbers));
+            Quicksort(unsortedNumbers, 0, unsortedNumbers.Count - 1);
+
+            Console.WriteLine(string.Join(", ", unsortedNumbers));
         }
 
-        private static List<int> Quicksort(List<int> unsortedNumbers, int startIndex, int endIndex)
+        private static void Quicksort(List<int> unsortedNumbers, int startIndex, int endIndex)
         {
-            int pivot = unsortedNumbers[0];
-            List<int> smaller = new List<int>();
-            List<int> bigger = new List<int>();
-
-            for (int i = 1; i < unsortedNumbers.Count; i++)
+            if (startIndex < endIndex)
             {
-                if (unsortedNumbers[i] < pivot)
+                int partitioningIndex = Partition(unsortedNumbers, startIndex, endIndex);
+
+                Quicksort(unsortedNumbers, startIndex, partitioningIndex - 1);
+                Quicksort(unsortedNumbers, partitioningIndex, endIndex);
+            }
+        }
+
+        private static int Partition(List<int> unsortedNumbers, int startIndex, int endIndex)
+        {
+            int pivot = unsortedNumbers[endIndex];
+            int i = startIndex - 1;
+
+            for (int j = startIndex; j < endIndex; j++)
+            {
+                if (unsortedNumbers[j] <= pivot)
                 {
-                    smaller.Add(unsortedNumbers[i]);
-                }
-                else
-                {
-                    bigger.Add(unsortedNumbers[i]);
+                    i++;
+
+                    int temp1 = unsortedNumbers[i];
+                    unsortedNumbers[i] = unsortedNumbers[j];
+                    unsortedNumbers[j] = temp1;
                 }
             }
 
-            smaller.Add(pivot);
+            int temp = unsortedNumbers[i + 1];
+            unsortedNumbers[i + 1] = unsortedNumbers[endIndex];
+            unsortedNumbers[endIndex] = temp;
 
-            var result = smaller.Concat(bigger).ToList();
-
-            return result;
+            return i + 1;
         }
     }
 }
