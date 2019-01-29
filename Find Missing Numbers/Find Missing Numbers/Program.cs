@@ -22,6 +22,7 @@ namespace Find_Missing_Numbers
         static int[] MissingNumbers(int[] arrayWithMissingNumbers, int[] fullArray)
         {
             List<int> missingNumbers = new List<int>();
+            Dictionary<int, int> dict = new Dictionary<int, int>();
 
             for (int i = 0; i < arrayWithMissingNumbers.Length; i++)
             {
@@ -32,10 +33,15 @@ namespace Find_Missing_Numbers
 
                 if (countInFullArray > countInMissingArray)
                 {
-                    if (!missingNumbers.Contains(currentNumber))
+                    if (!dict.ContainsKey(currentNumber))
                     {
+                        dict.Add(currentNumber, 0);
                         missingNumbers.Add(currentNumber);
                     }
+                    //if (!missingNumbers.Contains(currentNumber))
+                    //{
+                    //    missingNumbers.Add(currentNumber);
+                    //}
                 }
 
             }
