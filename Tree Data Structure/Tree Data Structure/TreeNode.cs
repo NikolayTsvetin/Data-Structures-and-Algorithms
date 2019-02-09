@@ -45,5 +45,50 @@ namespace Tree_Data_Structure
                 }
             }
         }
+
+        public void PostOrderTraversal()
+        {
+            if (Left != null)
+            {
+                Left.PostOrderTraversal();
+            }
+
+            if (Right != null)
+            {
+                Right.PostOrderTraversal();
+            }
+
+            Console.WriteLine(Data);
+        }
+
+        public void PreOrderTraversal()
+        {
+            Console.WriteLine(Data);
+
+            if (Left != null)
+            {
+                Left.PreOrderTraversal();
+            }
+
+            if (Right != null)
+            {
+                Right.PreOrderTraversal();
+            }
+        }
+
+        public void InOrderTraversal()
+        {
+            if (Left != null)
+            {
+                Left.InOrderTraversal();
+            }
+
+            Console.WriteLine(Data);
+
+            if (Right != null)
+            {
+                Right.InOrderTraversal();
+            }
+        }
     }
 }

@@ -21,19 +21,19 @@ namespace Tree_Data_Structure
             Root.AddElement(element);
         }
 
-        public void Print(TreeNode<T> root)
+        public void InOrderTraversal()
         {
-            if (root == null)
-            {
-                return;
-            }
-            else
-            {
-                Console.WriteLine(root.Data);
+            Root.InOrderTraversal();
+        }
 
-                Print(root.Left);
-                Print(root.Right);
-            }
+        public void PostOrderTraversal()
+        {
+            Root.PostOrderTraversal();
+        }
+
+        public void PreOrderTraversal()
+        {
+            Root.PreOrderTraversal();
         }
     }
 }
