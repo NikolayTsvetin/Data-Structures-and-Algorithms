@@ -12,12 +12,14 @@ namespace Tree_Data_Structure
         public T Data { get; private set; }
         public TreeNode<T> Left { get; set; }
         public TreeNode<T> Right { get; set; }
+        public bool IsRoot { get; private set; }
 
-        public TreeNode(T data)
+        public TreeNode(T data, bool isRoot = false)
         {
             Data = data;
             Left = null;
             Right = null;
+            IsRoot = isRoot;
         }
 
         public void AddElement(T element)
@@ -43,6 +45,59 @@ namespace Tree_Data_Structure
                 {
                     Right.AddElement(element);
                 }
+            }
+        }
+
+        public void FindAllLeafNodes()
+        {
+            if (Left == null && Right == null)
+            {
+                Console.WriteLine($"Leaf node found: {Data}");
+            }
+
+            if (Left != null)
+            {
+                Left.FindAllLeafNodes();
+            }
+
+            if (Right != null)
+            {
+                Right.FindAllLeafNodes();
+            }
+        }
+
+        public void FindAllMiddleNodes()
+        {
+            if (Left != null)
+            {
+                Left.FindAllMiddleNodes();
+            }
+
+            if (Right != null)
+            {
+                Right.FindAllMiddleNodes();
+            }
+
+            // TODO: isRoot flag, DFS, call these methods from outside the class.
+
+            if ((Left != null || Right != null) && !IsRoot)
+            {
+                Console.WriteLine($"Middle node found: {Data}");
+            }
+        }
+
+        public void InOrderTraversal()
+        {
+            if (Left != null)
+            {
+                Left.InOrderTraversal();
+            }
+
+            Console.WriteLine(Data);
+
+            if (Right != null)
+            {
+                Right.InOrderTraversal();
             }
         }
 
@@ -73,21 +128,6 @@ namespace Tree_Data_Structure
             if (Right != null)
             {
                 Right.PreOrderTraversal();
-            }
-        }
-
-        public void InOrderTraversal()
-        {
-            if (Left != null)
-            {
-                Left.InOrderTraversal();
-            }
-
-            Console.WriteLine(Data);
-
-            if (Right != null)
-            {
-                Right.InOrderTraversal();
             }
         }
     }

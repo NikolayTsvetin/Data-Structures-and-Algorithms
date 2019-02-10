@@ -11,14 +11,24 @@ namespace Tree_Data_Structure
     {
         public TreeNode<T> Root { get; private set; }
 
-        public Tree(T data)
+        public Tree(T data, bool isRoot = false)
         {
-            Root = new TreeNode<T>(data);
+            Root = new TreeNode<T>(data, isRoot);
         }
 
         public void AddElement(T element)
         {
             Root.AddElement(element);
+        }
+
+        public void FindAllLeafNodes()
+        {
+            Root.FindAllLeafNodes();
+        }
+
+        public void FindAllMiddleNodes()
+        {
+            Root.FindAllMiddleNodes();
         }
 
         public void InOrderTraversal()

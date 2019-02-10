@@ -10,7 +10,7 @@ namespace Tree_Data_Structure
     {
         static void Main(string[] args)
         {
-            Tree<int> tree = new Tree<int>(12);
+            Tree<int> tree = new Tree<int>(12, true);
 
             tree.AddElement(8);
             tree.AddElement(18);
@@ -19,15 +19,20 @@ namespace Tree_Data_Structure
             tree.AddElement(11);
             tree.AddElement(17);
 
-            Console.WriteLine("--- InOrderTraversal ---");
-            tree.InOrderTraversal();
+            //Console.WriteLine("--- InOrderTraversal ---");
+            //tree.InOrderTraversal();
 
-            Console.WriteLine("--- PostOrderTraversal ---");
-            tree.PostOrderTraversal();
+            //Console.WriteLine("--- PostOrderTraversal ---");
+            //tree.PostOrderTraversal();
 
-            Console.WriteLine("--- PreOrderTraversal ---");
-            tree.PreOrderTraversal();
-            //tree.Print(tree.Root);
+            //Console.WriteLine("--- PreOrderTraversal ---");
+            //tree.PreOrderTraversal();
+
+            Console.WriteLine("--- All leaf nodes ---");
+            tree.FindAllLeafNodes();
+
+            Console.WriteLine("--- All middle nodes ---");
+            tree.FindAllMiddleNodes();
         }
     }
 }
