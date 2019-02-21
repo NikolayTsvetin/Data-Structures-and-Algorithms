@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tree_Data_Structure
+namespace Binary_search_tree
 {
     class Program
     {

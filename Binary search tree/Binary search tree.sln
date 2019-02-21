@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree Data Structure", "Tree Data Structure\Tree Data Structure.csproj", "{35F93E78-AA1E-4249-AF45-3DF6A58EA0CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary search tree", "Binary search tree\Binary search tree.csproj", "{A6171F15-6D9A-4512-AD79-11DB70061BA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{35F93E78-AA1E-4249-AF45-3DF6A58EA0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35F93E78-AA1E-4249-AF45-3DF6A58EA0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35F93E78-AA1E-4249-AF45-3DF6A58EA0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35F93E78-AA1E-4249-AF45-3DF6A58EA0CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6171F15-6D9A-4512-AD79-11DB70061BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6171F15-6D9A-4512-AD79-11DB70061BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6171F15-6D9A-4512-AD79-11DB70061BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6171F15-6D9A-4512-AD79-11DB70061BA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

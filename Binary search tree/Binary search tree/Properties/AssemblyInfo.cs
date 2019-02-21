@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Tree Data Structure")]
+[assembly: AssemblyTitle("Binary search tree")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Tree Data Structure")]
+[assembly: AssemblyProduct("Binary search tree")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("35f93e78-aa1e-4249-af45-3df6a58ea0ce")]
+[assembly: Guid("a6171f15-6d9a-4512-ad79-11db70061ba1")]
 
 // Version information for an assembly consists of the following four values:
 //
