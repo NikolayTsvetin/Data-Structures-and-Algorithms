@@ -31,6 +31,16 @@ namespace Binary_search_tree
             Root.FindAllMiddleNodes();
         }
 
+        public int Height(TreeNode<T> node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+
+            return (1 + Math.Max(Height(node.Left), Height(node.Right)));
+        }
+
         public void InOrderTraversal()
         {
             Root.InOrderTraversal();

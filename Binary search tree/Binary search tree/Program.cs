@@ -33,6 +33,9 @@ namespace Binary_search_tree
 
             Console.WriteLine("--- All middle nodes ---");
             tree.FindAllMiddleNodes();
+
+            int height = tree.Height(tree.Root);
+            Console.WriteLine(height);
         }
     }
 }
