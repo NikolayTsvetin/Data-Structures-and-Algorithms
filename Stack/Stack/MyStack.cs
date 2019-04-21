@@ -9,7 +9,7 @@ namespace Stack
     public class MyStack<T>
         where T : IComparable<T>
     {
-        public List<T> Elements { get; private set; }
+        private List<T> Elements { get; set; }
 
         public MyStack()
         {
