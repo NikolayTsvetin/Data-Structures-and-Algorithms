@@ -26,10 +26,13 @@ namespace LinkedList
             myLinkedList.RemoveLast();
 
             myLinkedList.PrintAllNodes();
+            Console.WriteLine(myLinkedList.GetLength());
 
             myLinkedList.RemoveFirst();
             myLinkedList.RemoveLast();
             myLinkedList.PrintAllNodes();
+            Console.WriteLine(myLinkedList.GetLength());
+
         }
     }
 }

@@ -99,7 +99,31 @@ namespace LinkedList
                 currentElement = currentElement.Next;
             }
 
-            Console.WriteLine(result.ToString());
+            Console.WriteLine(result.ToString().Trim(' '));
+        }
+
+        public int GetLength()
+        {
+            Node<T> currentElement = head;
+            int length = 0;
+
+            while (currentElement != null)
+            {
+                length++;
+                currentElement = currentElement.Next;
+            }
+
+            return length;
+        }
+
+        public T GetFirst()
+        {
+            if (head != null)
+            {
+                return head.Value;
+            }
+
+            return default(T);
         }
     }
 }

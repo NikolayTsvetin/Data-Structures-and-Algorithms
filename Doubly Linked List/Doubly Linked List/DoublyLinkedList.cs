@@ -74,7 +74,7 @@ namespace Doubly_Linked_List
                 }
             }
 
-            Console.WriteLine(result.ToString());
+            Console.WriteLine(result.ToString().Trim(' '));
         }
 
         public void RemoveFirst()
@@ -106,6 +106,30 @@ namespace Doubly_Linked_List
 
             beforeLast.Next = null;
             lastElement.Prev = null;
+        }
+
+        public int GetLength()
+        {
+            Node<T> currentElement = head;
+            int length = 0;
+
+            while (currentElement != null)
+            {
+                length++;
+                currentElement = currentElement.Next;
+            }
+
+            return length;
+        }
+
+        public T GetFirst()
+        {
+            if (head != null)
+            {
+                return head.Value;
+            }
+
+            return default(T);
         }
     }
 }
