@@ -131,5 +131,36 @@ namespace Doubly_Linked_List
 
             return default(T);
         }
+
+        public DoublyLinkedList<T> Reverse()
+        {
+            DoublyLinkedList<T> reversedList = new DoublyLinkedList<T>();
+            var currentHead = head;
+            var lastElement = head;
+
+            if (currentHead == null)
+            {
+                return reversedList;
+            }
+            else
+            {
+                while (currentHead.Next != null)
+                {
+                    currentHead = currentHead.Next;
+                }
+
+                lastElement = currentHead;
+
+                reversedList.AddFirst(lastElement.Value);
+
+                while (lastElement.Prev != null)
+                {
+                    lastElement = lastElement.Prev;
+                    reversedList.AddLast(lastElement.Value);
+                }
+
+                return reversedList;
+            }
+        }
     }
 }

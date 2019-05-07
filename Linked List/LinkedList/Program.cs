@@ -33,6 +33,11 @@ namespace LinkedList
             myLinkedList.PrintAllNodes();
             Console.WriteLine(myLinkedList.GetLength());
 
+            Console.WriteLine("-------- REVERSED ----------");
+
+            myLinkedList = myLinkedList.Reverse();
+            myLinkedList.PrintAllNodes();
+
         }
     }
 }

@@ -125,5 +125,34 @@ namespace LinkedList
 
             return default(T);
         }
+
+        public LinkedList<T> Reverse()
+        {
+            LinkedList<T> reversedList = new LinkedList<T>();
+            var currentHead = head;
+            Stack<T> stack = new Stack<T>();
+
+            if (currentHead == null)
+            {
+                return reversedList;
+            }
+            else
+            {
+                stack.Push(currentHead.Value);
+
+                while (currentHead.Next != null)
+                {
+                    currentHead = currentHead.Next;
+                    stack.Push(currentHead.Value);
+                }
+
+                while (stack.Count > 0)
+                {
+                    reversedList.AddLast(stack.Pop());
+                }
+
+                return reversedList;
+            }
+        }
     }
 }
