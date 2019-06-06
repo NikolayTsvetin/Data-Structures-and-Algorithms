@@ -26,17 +26,22 @@ namespace LinkedList
             myLinkedList.RemoveLast();
 
             myLinkedList.PrintAllNodes();
-            Console.WriteLine(myLinkedList.GetLength());
 
-            myLinkedList.RemoveFirst();
-            myLinkedList.RemoveLast();
-            myLinkedList.PrintAllNodes();
-            Console.WriteLine(myLinkedList.GetLength());
+            Console.WriteLine("starting recursive printing...");
+            var head = myLinkedList.GetFirst();
 
-            Console.WriteLine("-------- REVERSED ----------");
+            myLinkedList.PrintRecursive(head);
+            //Console.WriteLine(myLinkedList.GetLength());
 
-            myLinkedList = myLinkedList.Reverse();
-            myLinkedList.PrintAllNodes();
+            //myLinkedList.RemoveFirst();
+            //myLinkedList.RemoveLast();
+            //myLinkedList.PrintAllNodes();
+            //Console.WriteLine(myLinkedList.GetLength());
+
+            //Console.WriteLine("-------- REVERSED ----------");
+
+            //myLinkedList = myLinkedList.Reverse();
+            //myLinkedList.PrintAllNodes();
 
         }
     }

@@ -116,14 +116,33 @@ namespace LinkedList
             return length;
         }
 
-        public T GetFirst()
+        public Node<T> GetFirst()
         {
             if (head != null)
             {
-                return head.Value;
+                return head;
             }
 
-            return default(T);
+            return null;
+        }
+
+        public Node<T> GetNext(Node<T> currentElement)
+        {
+            return currentElement.Next;
+        }
+
+        public void PrintRecursive(Node<T> el)
+        {
+            if (el == null)
+            {
+                return;
+            }
+
+            Console.WriteLine(el.Value);
+
+            el = GetNext(el);
+
+            PrintRecursive(el);
         }
 
         public LinkedList<T> Reverse()
