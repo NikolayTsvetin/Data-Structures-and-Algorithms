@@ -19,23 +19,26 @@ namespace Binary_search_tree
             tree.AddElement(11);
             tree.AddElement(17);
 
-            //Console.WriteLine("--- InOrderTraversal ---");
-            //tree.InOrderTraversal();
+            Console.WriteLine("--- InOrderTraversal ---");
+            tree.InOrderTraversal();
 
-            //Console.WriteLine("--- PostOrderTraversal ---");
-            //tree.PostOrderTraversal();
+            Console.WriteLine("--- PostOrderTraversal ---");
+            tree.PostOrderTraversal();
 
-            //Console.WriteLine("--- PreOrderTraversal ---");
-            //tree.PreOrderTraversal();
+            Console.WriteLine("--- PreOrderTraversal ---");
+            tree.PreOrderTraversal();
 
-            Console.WriteLine("--- All leaf nodes ---");
-            tree.FindAllLeafNodes();
+            Console.WriteLine("--- BreadthFirstSearch ---");
+            tree.BreadthFirstSearch();
 
-            Console.WriteLine("--- All middle nodes ---");
-            tree.FindAllMiddleNodes();
+            //Console.WriteLine("--- All leaf nodes ---");
+            //tree.FindAllLeafNodes();
 
-            int height = tree.Height(tree.Root);
-            Console.WriteLine(height);
+            //Console.WriteLine("--- All middle nodes ---");
+            //tree.FindAllMiddleNodes();
+
+            //int height = tree.Height(tree.Root);
+            //Console.WriteLine(height);
         }
     }
 }

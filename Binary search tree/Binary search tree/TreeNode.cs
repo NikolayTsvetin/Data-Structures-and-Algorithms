@@ -130,5 +130,39 @@ namespace Binary_search_tree
                 Right.PreOrderTraversal();
             }
         }
+
+        public void BreadthFirstSearch()
+        {
+            Queue<TreeNode<T>> elements = new Queue<TreeNode<T>>();
+
+            Console.WriteLine(Data);
+
+            if (Left != null)
+            {
+                elements.Enqueue(Left);
+            }
+
+            if (Right != null)
+            {
+                elements.Enqueue(Right);
+            }
+
+            while (elements.Count > 0)
+            {
+                var nextNode = elements.Dequeue();
+
+                Console.WriteLine(nextNode.Data);
+
+                if (nextNode.Left != null)
+                {
+                    elements.Enqueue(nextNode.Left);
+                }
+
+                if (nextNode.Right != null)
+                {
+                    elements.Enqueue(nextNode.Right);
+                }
+            }
+        }
     }
 }

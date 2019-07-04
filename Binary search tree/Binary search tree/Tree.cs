@@ -55,5 +55,10 @@ namespace Binary_search_tree
         {
             Root.PreOrderTraversal();
         }
+
+        public void BreadthFirstSearch()
+        {
+            Root.BreadthFirstSearch();
+        }
     }
 }
