@@ -1,17 +1,17 @@
-# Data-Structure-and-Algorithms
+# Data-Structures-and-Algorithms
 ### Content: ###
-* Binary Search Tree
-* List
-* Queue
-* Stack
-* Singly Linked List
-* Doubly Linked List
-* Bubble Sort
-* Counting Sort
-* Insertion Sort
-* Merge Sort
-* Quick Sort
-* Selection Sort
-* Binary Search
-* Linear Search
-* Jump Search
+* [Binary Search Tree](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/tree/master/Binary%20search%20tree/Binary%20search%20tree)
+* [List](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Linear%20Data%20Structures/Linear%20Data%20Structures/List.cs)
+* [Queue](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Linear%20Data%20Structures/Linear%20Data%20Structures/Queue.cs)
+* [Stack](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Linear%20Data%20Structures/Linear%20Data%20Structures/Stack.cs)
+* [Singly Linked List](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Linear%20Data%20Structures/Linear%20Data%20Structures/SinglyLinkedList.cs)
+* [Doubly Linked List](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Linear%20Data%20Structures/Linear%20Data%20Structures/DoublyLinkedList.cs)
+* [Bubble Sort](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Sorting%20Algorithms/Sorting%20Algorithms/BubbleSortClass.cs)
+* [Counting Sort](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Sorting%20Algorithms/Sorting%20Algorithms/CountingSortClass.cs)
+* [Insertion Sort](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Sorting%20Algorithms/Sorting%20Algorithms/InsertionSortClass.cs)
+* [Merge Sort](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Sorting%20Algorithms/Sorting%20Algorithms/MergeSortClass.cs)
+* [Quick Sort](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Sorting%20Algorithms/Sorting%20Algorithms/QuickSortClass.cs)
+* [Selection Sort](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Sorting%20Algorithms/Sorting%20Algorithms/SelectionSortClass.cs)
+* [Binary Search](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Searching%20Algorithms/Searching%20Algorithms/BinarySearchClass.cs)
+* [Linear Search](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Searching%20Algorithms/Searching%20Algorithms/LinearSeachClass.cs)
+* [Jump Search](https://github.com/NikolayTsvetin/Data-Structures-and-Algorithms/blob/master/Searching%20Algorithms/Searching%20Algorithms/JumpSearchClass.cs)
