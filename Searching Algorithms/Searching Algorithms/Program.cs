@@ -12,7 +12,7 @@ namespace Searching_Algorithms
         {
             int[] numbers = new int[] { 1, 5, 6, 7, 10, 19, 22 };
 
-            Console.WriteLine(numbers.JumpSearch(222));
+            Console.WriteLine(numbers.BinarySearchRecursive(5));
         }
     }
 }

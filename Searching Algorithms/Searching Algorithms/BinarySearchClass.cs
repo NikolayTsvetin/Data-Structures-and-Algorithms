@@ -7,9 +7,7 @@ namespace Searching_Algorithms
         public static int BinarySearchRecursive<T>(this T[] array, T element)
             where T : IComparable<T>
         {
-            int result = BinarySearchInRange(array, 0, array.Length, element);
-
-            return result;
+            return BinarySearchInRange(array, 0, array.Length, element);
         }
 
         private static int BinarySearchInRange<T>(T[] array, int left, int right, T element)
