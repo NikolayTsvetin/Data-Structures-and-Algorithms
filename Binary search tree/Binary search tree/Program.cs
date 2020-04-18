@@ -4,41 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Binary_search_tree
+namespace Binary_Search_Tree
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Tree<int> tree = new Tree<int>(12, true);
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
 
-            tree.AddElement(8);
-            tree.AddElement(18);
-            tree.AddElement(5);
-            tree.AddElement(4);
-            tree.AddElement(11);
-            tree.AddElement(17);
+            tree.Add(1);
+            tree.Add(2);
+            tree.Add(7);
+            tree.Add(3);
+            tree.Add(10);
+            tree.Add(5);
+            tree.Add(8);
 
-            Console.WriteLine("--- InOrderTraversal ---");
-            tree.InOrderTraversal();
-
-            Console.WriteLine("--- PostOrderTraversal ---");
-            tree.PostOrderTraversal();
-
-            Console.WriteLine("--- PreOrderTraversal ---");
-            tree.PreOrderTraversal();
-
-            Console.WriteLine("--- BreadthFirstSearch ---");
-            tree.BreadthFirstSearch();
-
-            //Console.WriteLine("--- All leaf nodes ---");
-            //tree.FindAllLeafNodes();
-
-            //Console.WriteLine("--- All middle nodes ---");
-            //tree.FindAllMiddleNodes();
-
-            //int height = tree.Height(tree.Root);
-            //Console.WriteLine(height);
+            tree.GetLeafNodes();
+            //var x = tree.Find(item => item.Data.CompareTo(5) == 0);
         }
     }
 }
