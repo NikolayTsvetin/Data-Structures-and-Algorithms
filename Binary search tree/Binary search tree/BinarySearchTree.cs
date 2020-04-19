@@ -113,45 +113,46 @@ namespace Binary_Search_Tree
             return leftSubTreeResult != null ? leftSubTreeResult : rightSubTreeResult;
         }
 
-        //public IEnumerable<Node<T>> Find(Func<Node<T>, bool> predicate)
-        //{
-        //    if (Root == null)
-        //    {
-        //        throw new InvalidOperationException("Cannot search in empty tree.");
-        //    }
+        public int GetDepth()
+        {
+            if (Root == null)
+            {
+                return 0;
+            }
 
-        //    IEnumerable<Node<T>> result = Find(Root, predicate);
+            int depth = GetDepth(Root);
 
-        //    return result;
-        //}
+            return depth;
+        }
 
-        //private IEnumerable<Node<T>> Find(Node<T> root, Func<Node<T>, bool> predicate)
-        //{
-        //    if (root == null)
-        //    {
-        //        yield break;
-        //    }
+        private int GetDepth(Node<T> root)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
 
-        //    if (predicate(root))
-        //    {
-        //        yield return root;
-        //    }
+            int leftSubTreeDepth = GetDepth(root.Left);
+            int rightSubTreeDepth = GetDepth(root.Right);
 
-        //    Find(root.Left, predicate);
-        //    Find(root.Right, predicate);
-        //}
+            return leftSubTreeDepth > rightSubTreeDepth ? leftSubTreeDepth + 1 : rightSubTreeDepth + 1;
+        }
 
-        public void GetLeafNodes()
+        public List<Node<T>> GetLeafNodes()
         {
             if (Root == null)
             {
                 throw new InvalidOperationException("Cannot traverse empty tree.");
             }
 
-            GetLeafNodes(Root);
+            List<Node<T>> allLeafNodes = new List<Node<T>>(); 
+
+            GetLeafNodes(Root, allLeafNodes);
+
+            return allLeafNodes;
         }
 
-        private void GetLeafNodes(Node<T> root)
+        private void GetLeafNodes(Node<T> root, List<Node<T>> allLeafNodes)
         {
             if (root == null)
             {
@@ -160,11 +161,11 @@ namespace Binary_Search_Tree
 
             if (root.Left == null && root.Right == null)
             {
-                Console.WriteLine($"Leaf node found: {root.Data}");
+                allLeafNodes.Add(root);
             }
 
-            GetLeafNodes(root.Left);
-            GetLeafNodes(root.Right);
+            GetLeafNodes(root.Left, allLeafNodes);
+            GetLeafNodes(root.Right, allLeafNodes);
         }
 
         public Node<T> GetRoot()
@@ -228,7 +229,5 @@ namespace Binary_Search_Tree
             PreOrderTraversal(root.Left);
             PreOrderTraversal(root.Right);
         }
-
-        // TODO: Get depth, Find (predicate ?), yield return leaf.
     }
 }

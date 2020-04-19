@@ -20,8 +20,7 @@ namespace Binary_Search_Tree
             tree.Add(5);
             tree.Add(8);
 
-            tree.GetLeafNodes();
-            //var x = tree.Find(item => item.Data.CompareTo(5) == 0);
+            int depth = tree.GetDepth();
         }
     }
 }
